@@ -5,6 +5,12 @@ package com.company;
  */
 public class Main {
     public static void main(String[] args) {
-        //TODO write here builder pattern example !!!
+        Car ford = new FordBuilder()
+                .setModel("Fiesta")
+                .setWeight(30000)
+                .setEngineType("V6")
+                .setMP3(true);
+
+        ford.DisplayCarInfo();
     }
 }
