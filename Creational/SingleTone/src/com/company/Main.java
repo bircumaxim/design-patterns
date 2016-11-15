@@ -5,6 +5,9 @@ package com.company;
  */
 public class Main {
     public static void main(String[] args) {
-        //TODO write here single tone pattern example !
+        SingleTone singleToneInstance1 = SingleTone.getInstance();
+        singleToneInstance1.setMyVal(10);
+        SingleTone singleToneInstace2 = SingleTone.getInstance();
+        System.out.println(singleToneInstace2.getMyVal());
     }
 }
