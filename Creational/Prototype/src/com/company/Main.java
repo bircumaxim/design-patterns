@@ -5,5 +5,6 @@ package com.company;
  */
 public class Main {
     public static void main(String[] args) {
+        //TODO implement here prototype pattern example.
     }
 }
