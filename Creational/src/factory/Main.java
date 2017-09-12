@@ -10,10 +10,12 @@ public class Main {
     public static void main(String[] args) {
         ShapeFactory shapeFactory = new ShapeFactory();
         Scanner scanner = new Scanner(System.in);
-        while (true){
+        boolean isRunning = true;
+        while (isRunning){
             System.out.println("\nCircle 1");
             System.out.println("Square 2");
             System.out.println("Triangle 3");
+            System.out.println("Exit 4");
             System.out.print("Create new shape: ");
             switch (scanner.nextInt()){
                 case 1:
@@ -27,6 +29,9 @@ public class Main {
                 case 3:
                     shape = shapeFactory.createShape(ShapeType.TRIANGLE);
                     shape.render();
+                    break;
+                case 4:
+                    isRunning = false;
                     break;
                 default:
                     shape = shapeFactory.createShape();
