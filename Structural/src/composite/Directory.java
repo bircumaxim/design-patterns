@@ -4,22 +4,22 @@ import java.util.ArrayList;
 
 import static composite.Main.compositeBuilder;
 
-class Directory {
+class Directory implements Element {
     private String name;
-    private ArrayList<Object> includedFiles = new ArrayList<>();
+    private ArrayList<Element> includedElements = new ArrayList<>();
 
     public Directory(String name) {
         this.name = name;
     }
 
-    public void add(Object obj) {
-        includedFiles.add(obj);
+    public void add(Element element) {
+        includedElements.add(element);
     }
 
     public void ls() {
         System.out.println(compositeBuilder + name);
         compositeBuilder.append("   ");
-        for (Object obj : includedFiles) {
+        for (Object obj : includedElements) {
             // Recover the type of this object
             String name = obj.getClass().getSimpleName();
             if (name.equals("Directory")) {
